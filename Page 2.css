@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+.decode-text {
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color:#000000;
+  text-align: center;
+  color:#fff;
+  padding-top:10em;
+}
+
+
+.space {
+  display: inline-block;
+  width: 10px;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.text-animation {
+  display: inline-block;
+  position: relative;
+  color: transparent;
+  text-transform: uppercase;
+}
+.text-animation:before {
+  content: '';
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #cccccc;
+  width: 0;
+  height: 1.2em;
+  -webkit-transform: translate(-50%, -55%);
+  -ms-transform: translate(-50%, -55%);
+  transform: translate(-50%, -55%);
+}
+.text-animation.state-1:before {
+  width: 1px;
+}
+.text-animation.state-2:before {
+  width: .9em;
+}
+.text-animation.state-3 {
+  color: white;
+}
+.text-animation.state-3:before {
+  width: 0;
+}
+
+#refresh {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+div {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+body {
+  height: 50vh;
+  align-items: center;
+  display: flex;
+}

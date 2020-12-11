@@ -1,0 +1,428 @@
+
+@font-face {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    src: url("../fonts/GintoNordTrial-Black.woff2") format("woff2"), url("../fonts/GintoNordTrial-Black.woff") format("woff"); }
+  
+  @font-face {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+    src: url("../fonts/GintoNordTrial-Regular.woff2") format("woff2"), url("../fonts/GintoNordTrial-Regular.woff") format("woff"); }
+  
+  @font-face {
+    font-family: 'Courier New', Courier, monospace;
+    src: url("../fonts/GintoNormalTrial-Regular.woff2") format("woff2"), url("../fonts/GintoNormalTrial-Regular.woff") format("woff"); }
+  
+  @keyframes fadein {
+    from {
+      opacity: 0; }
+    to {
+      opacity: 1; } }
+  
+  body, h1, h2, h3, h4, h5, h6,
+  p, blockquote, pre, hr, dl,
+  dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+    font-size: unset;
+    font-weight: unset;
+    font-family: unset; }
+  
+  * {
+    box-sizing: border-box; }
+  
+  ul, li {
+    list-style: none; }
+  
+  a {
+    color: unset;
+    text-decoration: none; }
+  
+  img {
+    max-width: 100%; }
+  
+  :root {
+    --sm-font-size: 1vw;
+    --md-font-size: 3vw;
+    --base-font-size: 12.3vw;
+    --base-letter-spacing: -0.5vw;
+    --base-line-height: 0.8;
+    --active-area-offset: 0.075;
+    --primary-font: monospace;
+    --secondary-font: monospace;
+    --primary-color: white;
+    --secondary-color: black;
+    --tertiary-color: red; 
+    --quick-delay: 250ms;
+    --long-delay: 1000ms;
+    --long-duration: 500ms;
+    --lg-padding: 15vw;
+    --md-padding: calc(12.3vw * 0.8);
+    --sm-padding: 0.25em; }
+    @media (max-width: 900px) {
+      :root {
+        --sm-font-size: 3vw;
+        --md-font-size: 4.5vw; } }
+  
+  ::selection {
+    color: var(--primary-color); }
+  
+  html {
+    font-size: var(--base-font-size);
+    font-family: var(--primary-font);
+    font-weight: bold;
+    line-height: var(--base-line-height);
+    letter-spacing: var(--base-letter-spacing);
+    color: transparent;
+    background-color: var(--secondary-color);
+    -webkit-text-stroke: 0.015em var(--primary-color);
+    text-transform: uppercase;
+    text-align: center;
+    font-kerning: normal;
+    -webkit-font-smoothing: subpixel-antialiased;
+    margin-left: -0.75vw; }
+    @media (max-width: 900px) {
+      html {
+        -webkit-text-stroke: 0.015em var(--primary-color); } }
+  
+  a {
+    text-decoration: none; }
+    a:hover {
+      color: var(--primary-color);
+      text-decoration: underline; }
+  
+  .Marker {
+    position: fixed;
+    width: 100%;
+    height: 1px;
+    background-color: red; }
+  
+  .About--primary {
+    padding-top: calc(50vh - ((1em * var(--base-line-height)) / 2)); }
+  
+  .About--secondary {
+    margin-top: 1em; }
+  
+  .About--contact {
+    min-height: 60vh;
+    display: flex;
+    align-content: center;
+    flex-direction: column; }
+  
+  .ContactList {
+    font-size: var(--md-font-size);
+    font-weight: normal;
+    color: var(--primary-color);
+    letter-spacing: initial;
+    -webkit-text-stroke-width: initial;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    text-transform: initial; }
+  
+  .ContactList-item {
+    flex: 0 1 100%;
+    padding-bottom: var(--sm-padding);
+    line-height: 1; }
+    .ContactList-item:first-child {
+      padding-top: var(--md-padding); }
+  
+  .ContactList-item--address {
+    padding-top: var(--md-padding);
+    padding-bottom: var(--md-padding); }
+  
+  .Copyright {
+    font-size: var(--sm-font-size);
+    font-weight: normal;
+    color: var(--primary-color);
+    letter-spacing: initial;
+    -webkit-text-stroke-width: initial;
+    padding-bottom: 1em; }
+  
+  .Space {
+    margin-right: .065em; }
+  
+  .u-fadeIn--quick {
+    animation: var(--long-duration) linear var(--quick-delay) both fadein; }
+  
+  .u-fadeIn--long {
+    animation: var(--long-duration) linear var(--long-delay) both fadein; }
+  
+
+    
+  .u-line {
+    display: inline-block; }
+    .u-line.is-active {
+      color: var(--primary-color); }
+
+
+      .u-line-2 {
+        display: inline-block; }
+        .u-line-2.is-active {
+          color: var(--tertiary-color); }
+      
+  
+  .u-line--because .Letter--1 {
+    margin-right: -0.003em; }
+  
+  .u-line--because .Letter--2 {
+    margin-right: -0.005em; }
+  
+  .u-line--because .Letter--3 {
+    margin-right: 0.025em; }
+  
+  .u-line--because .Letter--4 {
+    margin-right: 0.025em; }
+  
+  .u-line--because .Letter--5 {
+    margin-right: -0.005em; }
+  
+  .u-line--isADesign .Letter--7 {
+    margin-right: 0.005em; }
+  
+  .u-line--isADesign .Letter--8 {
+    margin-right: 0.005em; }
+  
+  .u-line--isADesign .Letter--9 {
+    margin-right: 0.01em; }
+  
+  .u-line--isADesign .Letter--10 {
+    margin-right: 0.01em; }
+  
+  .u-line--company .Letter--1 {
+    margin-right: 0.02em; }
+  
+  .u-line--company .Letter--2 {
+    margin-right: 0.01em; }
+  
+  .u-line--company .Letter--3 {
+    margin-right: 0.01em; }
+  
+  .u-line--company .Letter--4 {
+    margin-right: -0.04em; }
+  
+  .u-line--company .Letter--5 {
+    margin-right: 0.02em; }
+  
+  .u-line--company .Letter--6 {
+    margin-right: 0.02em; }
+  
+  .u-line--basedIn .Letter--1 {
+    margin-right: 0.01em; }
+  
+  .u-line--basedIn .Letter--2 {
+    margin-right: 0.03em; }
+  
+  .u-line--basedIn .Letter--3 {
+    margin-right: 0.01em; }
+  
+  .u-line--brooklyn .Letter--2 {
+    margin-right: 0.025em; }
+  
+  .u-line--brooklyn .Letter--3 {
+    margin-right: 0.03em; }
+  
+  .u-line--brooklyn .Letter--5 {
+    margin-right: 0.03em; }
+  
+  .u-line--brooklyn .Letter--6 {
+    margin-right: -0.175em; }
+  
+  .u-line--brooklyn .Letter--7 {
+    margin-right: 0.03em; }
+  
+  .u-line--newYork .Letter--2 {
+    margin-right: 0.03em; }
+  
+  .u-line--newYork .Letter--5 {
+    margin-right: -0.075em; }
+  
+  .u-line--newYork .Letter--6 {
+    margin-right: 0.01em; }
+  
+  .u-line--newYork .Letter--7 {
+    margin-right: 0.015em; }
+  
+  .u-line--newYork .Letter--8 {
+    margin-right: 0.02em; }
+  
+  .u-line--weBuild .Letter--1 {
+    margin-right: 0.02em; }
+  
+  .u-line--weBuild .Letter--4 {
+    margin-right: 0.015em; }
+  
+  .u-line--weBuild .Letter--5 {
+    margin-right: 0.015em; }
+  
+  .u-line--weBuild .Letter--7 {
+    margin-right: 0.03em; }
+  
+  .u-line--brands .Letter--1 {
+    margin-right: 0.01em; }
+  
+  .u-line--brands .Letter--2 {
+    margin-right: 0.06em; }
+  
+  .u-line--brands .Letter--3 {
+    margin-right: 0.025em; }
+  
+  .u-line--brands .Letter--5 {
+    margin-right: 0.01em; }
+  
+  .u-line--brands .Letter--6 {
+    margin-right: 0.02em; }
+  
+  .u-line--frontAnd .Letter--1 {
+    margin-right: 0.015em; }
+  
+  .u-line--frontAnd .Letter--2 {
+    margin-right: 0.03em; }
+  
+  .u-line--frontAnd .Letter--3 {
+    margin-right: 0.01em; }
+  
+  .u-line--frontAnd .Letter--4 {
+    margin-right: 0.03em; }
+  
+  .u-line--isTheFirst .Letter--4 {
+    margin-right: 0.03em; }
+  
+  .u-line--isTheFirst .Letter--5 {
+    margin-right: -0.001em; }
+  
+  .u-line--isTheFirst .Letter--8 {
+    margin-right: 0.02em; }
+  
+  .u-line--isTheFirst .Letter--10 {
+    margin-right: 0.03em; }
+  
+  .u-line--isTheFirst .Letter--11 {
+    margin-right: 0.005em; }
+  
+  .u-line--design .Letter--1 {
+    margin-right: 0.005em; }
+  
+  .u-line--design .Letter--2 {
+    margin-right: 0.005em; }
+  
+  .u-line--design .Letter--3 {
+    margin-right: 0.01em; }
+  
+  .u-line--design .Letter--4 {
+    margin-right: 0.01em; }
+  
+  .u-line--talkShow .Letter--1 {
+    margin-right: -0.03em; }
+  
+  .u-line--talkShow .Letter--2 {
+    margin-right: 0.04em; }
+  
+  .u-line--talkShow .Letter--3 {
+    margin-right: 0.02em; }
+  
+  .u-line--talkShow .Letter--6 {
+    margin-right: 0.015em; }
+  
+  .u-line--talkShow .Letter--7 {
+    margin-right: 0.015em; }
+  
+  .u-line--onThe .Letter--1 {
+    margin-right: 0.01em; }
+  
+  .u-line--onThe .Letter--4 {
+    margin-right: 0.035em; }
+  
+  .u-line--internet .Letter--1 {
+    margin-right: 0; }
+  
+  .u-line--internet .Letter--2 {
+    margin-right: 0.025em; }
+  
+  .u-line--internet .Letter--3 {
+    margin-right: 0.025em; }
+  
+  .u-line--internet .Letter--4 {
+    margin-right: 0em; }
+  
+  .u-line--internet .Letter--5 {
+    margin-right: 0.02em; }
+  
+  .u-line--internet .Letter--6 {
+    margin-right: 0; }
+  
+  .u-line--internet .Letter--7 {
+    margin-right: 0.04em; }
+  
+  .u-line--internet .Letter--8 {
+    margin-right: -0.1em; }
+  
+  [data-word="because"] {
+    --kerning: -0.003 -0.005 0.025 0.025 -0.005; }
+  
+  [data-word="brand"] {
+    --kerning: 0.01 0.06 0.025 -0.005; }
+  
+  [data-word="company"] {
+    --kerning: 0.02 0.01 0.01 -0.04 0.02 0.02; }
+  
+  [data-word="based"] {
+    --kerning: 0.01 0.03 0.01 0; }
+  
+  [data-word="brooklyn"] {
+    --kerning: 0 0.025 0.03 0 0.03 -0.175 0.03; }
+  
+  [data-word="new"] {
+    --kerning: 0 0.03 0; }
+  
+  [data-word="york."] {
+    --kerning: -0.075 0.01 0.015 0.02; }
+  
+  [data-word="we"] {
+    --kerning: 0.02 0; }
+  
+  [data-word="help"] {
+    --kerning: -0.01 0 0.025 0; }
+  
+  [data-word="startups"] {
+    --kerning: 0.01 -0.05 0.03 0.05 0.04 0 0.04; }
+  
+  [data-word="startups."] {
+    --kerning: 0.01 -0.05 0.03 0.05 0.04 0 0.04 0.02; }
+  
+  [data-word="icons"] {
+    --kerning: 0.02 0.02 0 0 0; }
+  
+  [data-word="and"] {
+    --kerning: 0.03 -0.01 0; }
+  
+  [data-word="behave"] {
+    --kerning: 0.02 0 0.03 -0.1 0.03; }
+  
+  [data-word="more"] {
+    --kerning: 0.02 0.01 0.03 0; }
+  
+  [data-word="like"] {
+    --kerning: 0.02 -0.01 0.03 0; }
+  
+  [data-word="front"] {
+    --kerning: 0.015 0.03 0.01 0.03; }
+  
+  [data-word="the"] {
+    --kerning: 0.03 -0.001 0; }
+  
+  [data-word="first"] {
+    --kerning: 0.02 0 0.03 0.008; }
+  
+  [data-word="culture"] {
+    --kerning: 0.01 0 -0.16 0.04 0 0.03; }
+  
+  [data-word="talk"] {
+    --kerning: -0.06 0.04 0.03 0; }
+  
+  [data-word="internet"] {
+    --kerning: 0 0.025 0.025 0 0.02 0 0.04 -0.1; }
+  
+  [data-word="show."] {
+    --kerning: 0.015 0.015 0 -0.05; }
+  
